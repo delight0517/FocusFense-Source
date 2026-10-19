@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "extensionId": "popjkofklmidngceakpcokopghehjngo",
+  "version": "1.0.31",
+  "publicKeySha256": "fef9ae5abc83d6240af2eaef67479d6ebfe815e58f31425722ad5fdaeb845609",
+  "sha256": "f6db68476383d64152d7293652cad7a822094c454a0aca6716db746c6a74dcc5",
+  "fileCount": 15,
+  "files": {
+    "manifest.json": "252b25401bacce75a98c9010034df0363b8861d3dd2d47ea9649d920d98b2021",
+    "background.js": "d441860192decf20407fe041c1dd33bce45f6c67399ae8e36fef1490b3aeb47e",
+    "precision_strike.js": "95d93ea9624c29df874442427f47de04fb7a935876df25ef1a0feddeded47a2b",
+    "content.js": "61bcccbbfd28fd950d51932481f02c735d69cc2a14f9e9e075c40bada1be1064",
+    "content.css": "5c9d60660aec0936b9753ee9139323e30e15f2613a09bbe69c3a5c13ab5b0b4c",
+    "youtube_distraction.js": "4d84559f3d9858e38a113508ba48194e90097ac3bc2165302fa80cb8e80e22b6",
+    "youtube_budget_core.js": "f3cbcef2a1ab5b8c948d3d769e17d49f2f9e965b3285285a42b3435a0083e1ab",
+    "youtube_budget_worker.js": "8891973e323c0ac725a11087bed47932ee594515074f11f5f711fe57c193da64",
+    "youtube_budget_content.js": "2ffe5781462534d0478e11a4acbeffc94a751c3e977b6cc32f8ea2490bb4acc3",
+    "youtube_budget_options.js": "7270170373c746ce959c910a02078675eab3cd76ec761dc0de53cb453a742cb1",
+    "options.html": "223e5d1e4a9d8e44d77665d6fbca2e5bafc1fc87ffe9a0d713c2f2d2a5496fd5",
+    "options.js": "0e07b6527795583d987f55310df033b5d9886b958596fe70487325b7c1184658",
+    "popup.html": "0454bfe3c7e23c2fea0ab87d7f545088136d4057cad51833705dd6b565d76be8",
+    "popup.css": "4bf972a6f2903395311ca6be653caabade5821606219786f3c5e24582ee85a09",
+    "popup.js": "224711c98e4362c1d36eff517eacff01450923e607706f7d156dde4f6362b334"
+  }
+}

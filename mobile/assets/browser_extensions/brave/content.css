@@ -1,0 +1,18 @@
+html[data-sixvpn-hide-img="1"] img,
+html[data-sixvpn-hide-img="1"] picture,
+html[data-sixvpn-hide-img="1"] video {
+  visibility: hidden !important;
+  max-height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Hide YouTube player until app confirms channel is not blocked. */
+html[data-sixvpn-yt-pending="1"] ytd-app,
+html[data-sixvpn-yt-pending="1"] #player,
+html[data-sixvpn-yt-pending="1"] #movie_player,
+html[data-sixvpn-yt-pending="1"] video {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

@@ -1,0 +1,10 @@
+# Always enforced on Windows (PAC + Chrome URLBlocklist + extension + Firefox).
+# One URL or @handle per line. Lines starting with # are ignored.
+https://www.youtube.com/watch?v=0ucghClyrrk
+https://www.youtube.com/watch?v=so-Rv8RlCUc
+https://www.youtube.com/watch?v=lDRT5e6JsY4
+https://www.youtube.com/watch?v=wCrc7vy_Tmk
+https://www.youtube.com/watch?v=BddZUaoWB_s
+https://www.youtube.com/@winterstarcraft
+https://www.youtube.com/@뷰티풀너드
+https://www.youtube.com/watch?v=9zz_j97kDIY

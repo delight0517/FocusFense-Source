@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Six Clean Room Shield",
+  "description": "Reads shared rules from the host app App Group and applies domain blocks.",
+  "version": "1.0.0",
+  "permissions": ["declarativeNetRequest", "nativeMessaging"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

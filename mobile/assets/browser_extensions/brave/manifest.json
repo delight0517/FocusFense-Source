@@ -1,0 +1,47 @@
+﻿{
+  "manifest_version": 3,
+  "name": "6 VPN Blocker â€” ì´ë¯¸ì§€Â·ê²€ìƒ‰ ë³´ì¡°",
+  "version": "1.0.21",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApsJyuZYxNadMB4llGOFC9iaurDEfIw56fgqzVqUoUihUU8Gqjpe6mEL/CQDM3++4WzD0UmGY21eSPVBo/X1nvY8Fgy5V808pVnSexwsG8tvBfbLPjdhedAL8s1Pevulq0UDNksc38XRqmX54/sOeC+Cjd7255UL9cb8zY8v6i2MIS/+L1y5gHGDVzLT/qJrFDfkbxrq4HYX8iOWy9ghq0SNHR+SfKDoVpZblYab1T+yTubP04ufnvz2OpcUGmiEdHt1MYKaqR2ZQxbBCjthOFBGj68cnRZRhbnAYMWiKniMh+/wmjHegEkN+rq86vpb4wKvurnReufmk00h+YKtDnQIDAQAB",
+  "description": "ì´ë¯¸ì§€ ìˆ¨ê¹€ + Google/YouTube ê²€ìƒ‰ ê²°ê³¼ ì •ë°€ í•„í„° (6 VPN Blocker ì•±Â·ìŠ¤ì¼€ì¤„ ì—°ë™).",
+  "incognito": "spanning",
+  "permissions": ["storage", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
+  "host_permissions": ["<all_urls>", "http://127.0.0.1/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "6 VPN Blocker",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://*.youtu.be/*",
+        "*://youtu.be/*"
+      ],
+      "js": ["precision_strike.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["precision_strike.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://*.youtu.be/*",
+        "*://youtu.be/*"
+      ],
+      "js": ["youtube_distraction.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

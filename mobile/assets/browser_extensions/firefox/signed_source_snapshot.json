@@ -1,0 +1,21 @@
+﻿{
+    "signedVersion":  "1.0.24",
+    "signedAt":  "2026-10-18T12:32:00.3519124Z",
+    "amoAddonId":  "sixvpn-blocker@sixvpnblocker.app",
+    "amoVersionId":  6591353,
+    "sourceHashes":  {
+                         "background.js":  "4823f63464e0743f71606e3af047203090245e98835f273ef4481c0287f157eb",
+                         "content.css":  "5c9d60660aec0936b9753ee9139323e30e15f2613a09bbe69c3a5c13ab5b0b4c",
+                         "content.js":  "917605e61c346e715dca6eec2b5a0cc2379f716585886a583c77199778cd5404",
+                         "manifest.json":  "9b262df484858f63a6cbc9a555003b46f045b5059b3bb7a07c712f4643ae7964",
+                         "options.html":  "7f19053a833e585edc755f6e2cdc2ed3db30d52db5d90fde3783edd55f23380f",
+                         "options.js":  "40657e2e750c05eadffc73189c656593c14da8e4cef0cd241767f93dad4931ff",
+                         "precision_strike.js":  "a68df786c3caa29842d7e11fad7dc0fbc9505f8f2b1f559c835d3aeba362a3cd",
+                         "storage_migration.js":  "99b850bc232a2caf3db837427eafad5159339813a2ee7a117d01d536521926b9",
+                         "youtube_budget_content.js":  "ec7a5ba1d9a01d973ce2e54c6151416556eae73cf6424913de63f2810ca2f5e9",
+                         "youtube_budget_core.js":  "f3cbcef2a1ab5b8c948d3d769e17d49f2f9e965b3285285a42b3435a0083e1ab",
+                         "youtube_budget_options.js":  "4beaead8f15120fd7cf50b1ea1b87e535da895f03aa8197aad91f84fddb597e8",
+                         "youtube_budget_worker.js":  "7fc8daa6afaca6eee8d55c6a25889110d8737e74a5b07ff6248f2ce3830356de",
+                         "youtube_distraction.js":  "0bfc3c117747534c04a5e03d436151fcf843300d4a9c036cb6ed58d4e2e65bbf"
+                     }
+}

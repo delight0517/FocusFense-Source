@@ -1,0 +1,99 @@
+{
+  "manifest_version": 3,
+  "name": "FocusFense — 이미지·검색 보조",
+  "version": "1.0.24",
+  "description": "이미지 숨김 + Google/YouTube 검색 결과 정밀 필터 (FocusFense 앱·스케줄 연동).",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "sixvpn-blocker@sixvpnblocker.app",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "incognito": "spanning",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "scripts": [
+      "storage_migration.js",
+      "youtube_budget_core.js",
+      "background.js",
+      "youtube_budget_worker.js"
+    ]
+  },
+  "action": {
+    "default_title": "FocusFense",
+    "default_popup": "options.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://*.youtu.be/*",
+        "*://youtu.be/*"
+      ],
+      "js": [
+        "precision_strike.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "precision_strike.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://*.youtu.be/*",
+        "*://youtu.be/*"
+      ],
+      "js": [
+        "youtube_distraction.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://youtube.com/*",
+        "https://*.youtube.com/*"
+      ],
+      "js": [
+        "youtube_budget_core.js",
+        "youtube_budget_content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

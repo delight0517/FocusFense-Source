@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>6 VPN Blocker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <span class="dot"></span>
+    <h1>6 VPN Blocker</h1>
+  </header>
+
+  <div id="offline" class="offline hidden">
+    앱이 꺼져 있는 것 같아요. 6 VPN Blocker 앱을 실행한 뒤 다시 열어주세요.
+  </div>
+
+  <div id="mainArea">
+    <div class="quickRow">
+      <button id="qBlockPage" class="quickBtn">🚫 이 페이지 차단</button>
+      <button id="qAddToSchedule" class="quickBtn">➕ 스케줄에 추가</button>
+    </div>
+    <div id="schedulePicker" class="schedulePicker hidden">
+      <select id="scheduleSelect"></select>
+      <button id="scheduleAddBtn" class="primaryBtn">추가</button>
+    </div>
+
+    <div id="log" class="log"></div>
+
+    <div id="previewCard" class="previewCard hidden">
+      <div id="previewSummary"></div>
+      <ul id="previewWarnings"></ul>
+      <div class="previewActions">
+        <button id="previewCancel" class="ghostBtn">취소</button>
+        <button id="previewConfirm" class="primaryBtn">확인 후 적용</button>
+      </div>
+    </div>
+
+    <div class="inputRow">
+      <input id="msgInput" type="text" placeholder="예: 이 사이트 항상 막아줘" />
+      <button id="sendBtn" class="primaryBtn">보내기</button>
+    </div>
+  </div>
+
+  <footer>
+    <a id="openOptions" href="#">확장 설정 열기</a>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>

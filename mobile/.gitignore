@@ -1,0 +1,14 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+coverage/
+.idea/
+.vscode/
+*.log
+*.env
+.env.*
+local.properties
+Generated.xcconfig
+flutter_export_environment.sh
+.launcher_build/

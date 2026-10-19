@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>FocusFense 확장 설정</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 560px; margin: 24px; }
+    label { display: block; margin: 12px 0 4px; font-weight: 600; }
+    textarea { width: 100%; height: 110px; font-family: ui-monospace, monospace; font-size: 13px; }
+    .row { margin: 16px 0; }
+    h3 { margin-top: 24px; font-size: 1rem; }
+    .hint { color: #666; font-size: 12px; margin-top: 4px; line-height: 1.45; }
+  </style>
+</head>
+<body>
+  <h2>FocusFense</h2>
+  <p>이미지 숨김, 검색·피드, SafeSearch는 이 페이지에서 바뀝니다.</p>
+  <div class="row">
+    <label><input type="checkbox" id="hideImages" /> 이미지·동영상 숨기기</label>
+    <label><input type="checkbox" id="hideSerp" /> 검색 결과에서 키워드/도메인 포함 항목 숨기기</label>
+  </div>
+  <h3>홈 피드 (집중)</h3>
+  <div class="row">
+    <label><input type="checkbox" id="hideYtHomeFeed" /> YouTube 홈 피드 전체 숨기기 (집중 모드)</label>
+    <label><input type="checkbox" id="hideImagesOnYoutube" /> YouTube에서도 이미지·동영상 숨기기</label>
+    <label><input type="checkbox" id="hideGoogleHomeFeed" /> Google 홈의 피드(role=feed) 숨기기</label>
+    <label><input type="checkbox" id="forceSafeSearch" /> Google / Bing / DuckDuckGo 안전검색 강제</label>
+  </div>
+  <label for="kw">키워드 (줄바꿈으로 여러 개)</label>
+  <textarea id="kw" placeholder="예: 연예&#10;19금"></textarea>
+  <div class="hint">Google/Bing 검색·이미지에 적용. YouTube는 앱에서 가져온 채널·영상 URL만 피드에서 숨깁니다.</div>
+
+  <label for="dom">차단 도메인 (줄바꿈으로 여러 개)</label>
+  <textarea id="dom" placeholder="예: pornhub.com&#10;xvideos.com"></textarea>
+  <div class="hint">검색 결과 링크의 호스트가 이 목록에 들어가면 결과 자체가 숨겨집니다. 기본값으로 주요 성인 사이트가 포함되어 있습니다.</div>
+
+  <h3>YouTube 집중 모드</h3>
+  <div id="ytLockNotice" class="hint" style="display:none;color:#b45309;font-weight:600;"></div>
+  <div class="row" id="ytDistractionRow">
+    <label><input type="checkbox" id="yt_blockShorts" /> Shorts 차단 (피드 숨김 + 접근 시 홈으로 이동)</label>
+    <label><input type="checkbox" id="yt_hideHomeFeed" /> 홈 피드 전체 숨기기</label>
+    <label><input type="checkbox" id="yt_redirectHomeToSubscriptions" /> 홈 접속 시 구독 피드로 이동 (홈 피드를 숨기지 않을 때만)</label>
+    <label><input type="checkbox" id="yt_hideVideoSidebar" /> 시청 페이지 사이드바 전체 숨기기</label>
+    <label><input type="checkbox" id="yt_hideSidebarRecommended" /> 추천(관련) 영상 숨기기</label>
+    <label><input type="checkbox" id="yt_hideSidebarLiveChat" /> 라이브 채팅 숨기기</label>
+    <label><input type="checkbox" id="yt_hideSidebarPlaylist" /> 재생목록 패널 숨기기</label>
+    <label><input type="checkbox" id="yt_hideSidebarFundraiser" /> 후원·모금 숨기기</label>
+    <label><input type="checkbox" id="yt_hideEndScreenFeed" /> 엔드스크린 추천 피드 숨기기</label>
+    <label><input type="checkbox" id="yt_hideEndScreenCards" /> 엔드스크린·인앱 카드 숨기기</label>
+    <label><input type="checkbox" id="yt_hideComments" /> 댓글 숨기기</label>
+    <label><input type="checkbox" id="yt_hideMixes" /> 믹스 재생목록 숨기기</label>
+    <label><input type="checkbox" id="yt_hideMerchTicketsOffers" /> 굿즈·티켓·프로모션 숨기기</label>
+    <label><input type="checkbox" id="yt_hideExploreTrending" /> 탐색·인기 급상승 메뉴 숨기기</label>
+    <label><input type="checkbox" id="yt_hideNotifications" /> 알림 벨 숨기기</label>
+    <label><input type="checkbox" id="yt_hideTopHeader" /> 상단 헤더 숨기기</label>
+    <label><input type="checkbox" id="yt_hideVideoInfo" /> 영상 정보·설명 숨기기</label>
+    <label><input type="checkbox" id="yt_hideSubscriptions" /> 사이드 메뉴 구독 목록 숨기기</label>
+    <label><input type="checkbox" id="yt_disableAutoplay" /> 자동 재생 끄기</label>
+    <label><input type="checkbox" id="yt_disableAnnotations" /> 주석·카드 끄기</label>
+  </div>
+  <div class="hint">시청 흐름을 방해하는 YouTube UI 요소를 숨겨 집중을 돕습니다. 차단이 아니라 화면 정리이므로, 아래 채널/영상 차단과는 별개로 동작합니다.</div>
+
+  <h3>YouTube 채널 (앱 동기화 · 읽기 전용)</h3>
+  <label for="ytHandles">차단 채널 @핸들</label>
+  <textarea id="ytHandles" readonly placeholder="앱에서 채널을 추가하고 「지금 적용」 후 여기에 표시됩니다."></textarea>
+  <div class="hint">앱 스케줄/키워드에서 가져온 채널입니다. 진단 「적용됨」은 이 목록에 채널이 보일 때만 인정합니다.</div>
+
+  <div class="row">
+    <button id="save" type="button">저장</button>
+    <span id="msg"></span>
+  </div>
+  <script src="options.js"></script>
+<fieldset><legend>YouTube 시청 한도</legend><label><input id="ffHourlyEnabled" type="checkbox">최근 60분 중 시청 허용</label><label>허용 분 <input id="ffHourlyMinutes" type="number" min="1" max="60" value="10"></label><button id="ffHourlySave">시청 한도 저장</button><p id="ffHourlyStatus"></p><p>실제 재생 시간 기준 · 이 Firefox 프로필에서 합산 · 일시정지는 제외합니다.</p></fieldset><script src="youtube_budget_options.js"></script></body>
+</html>

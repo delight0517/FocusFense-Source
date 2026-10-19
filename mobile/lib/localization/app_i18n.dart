@@ -1,0 +1,240 @@
+import 'package:flutter/material.dart';
+
+class AppI18n {
+  AppI18n._();
+
+  static const List<Locale> supportedLocales = <Locale>[
+    Locale('en'),
+    Locale('ja'),
+    Locale('zh'),
+    Locale('ko'),
+    Locale('he'),
+    Locale('ar'),
+  ];
+
+  static const Map<String, Map<String, String>> _dict =
+      <String, Map<String, String>>{
+        'en': <String, String>{
+          'tab_home': 'Home',
+          'tab_rules': 'Schedules',
+          'tab_test': 'Test',
+          'tab_chat': 'Chat',
+          'tab_settings': 'Settings',
+          'scope_ios': 'Browser extension / practice',
+          'scope_mac': 'Desktop · Chrome + Edge + Firefox',
+          'mac_hero_title': 'Mac system-wide block',
+          'mac_hero_on': 'ON · blocking all browsers + apps',
+          'mac_hero_off': 'OFF · rules are saved but not enforced',
+          'mac_hero_action_on': 'Apply latest rules',
+          'mac_hero_action_off': 'Activate Mac-wide block',
+          'mac_hero_action_disable': 'Disable',
+          'mac_hero_locked': 'Locked — disable Lock Mode first',
+          'settings_title': 'Settings',
+          'settings_intro': 'Pick your mode and apply rules in one tap.',
+          'language_title': 'Language',
+          'language_subtitle': 'Choose app language',
+          'mode_title': 'Mode',
+          'mode_practice': 'Practice mode',
+          'mode_live': 'Live blocking',
+          'mode_practice_desc': 'Practice flow inside app',
+          'mode_live_desc': 'Real blocking: extensions + system DNS (desktop)',
+          'advanced_title': 'Advanced (open only if needed)',
+          'advanced_subtitle': 'Most users can skip this section.',
+          'apply_rules_sim': 'Apply rules (practice)',
+          'apply_rules_live': 'Apply rules (live)',
+          'refresh_path': 'Refresh path',
+          'todo_title_practice': 'What to do now (practice)',
+          'todo_title_live': 'What to do now (live)',
+        },
+        'ja': <String, String>{
+          'tab_home': 'ホーム',
+          'tab_rules': 'スケジュール',
+          'tab_test': 'テスト',
+          'tab_chat': 'チャット',
+          'tab_settings': '設定',
+          'scope_ios': '拡張 / 練習',
+          'scope_mac': 'デスクトップ · Chrome + Edge + Firefox',
+          'mac_hero_title': 'Mac 全体ブロック',
+          'mac_hero_on': 'ON · 全ブラウザ・全アプリで遮断中',
+          'mac_hero_off': 'OFF · ルールは保存済みだが未適用',
+          'mac_hero_action_on': '最新ルールを再適用',
+          'mac_hero_action_off': 'Mac 全体ブロックを有効化',
+          'mac_hero_action_disable': '解除',
+          'mac_hero_locked': 'ロック中 — まずロックを解除',
+          'settings_title': '設定',
+          'settings_intro': 'モードを選んで、ワンタップでルールを適用できます。',
+          'language_title': '言語',
+          'language_subtitle': 'アプリの表示言語を選択',
+          'mode_title': 'モード',
+          'mode_practice': '練習モード',
+          'mode_live': '実運用モード',
+          'mode_practice_desc': 'アプリ内で動作を練習',
+          'mode_live_desc': '拡張 + システムDNSで実ブロック（デスクトップ）',
+          'advanced_title': '詳細設定（必要時のみ）',
+          'advanced_subtitle': '通常はこのセクションを開かなくても大丈夫です。',
+          'apply_rules_sim': 'ルール適用（練習）',
+          'apply_rules_live': 'ルール適用（実機）',
+          'refresh_path': 'パスを再読み込み',
+          'todo_title_practice': '今やること（練習）',
+          'todo_title_live': '今やること（実運用）',
+        },
+        'zh': <String, String>{
+          'tab_home': '首页',
+          'tab_rules': '日程',
+          'tab_test': '测试',
+          'tab_chat': '聊天',
+          'tab_settings': '设置',
+          'scope_ios': '扩展 / 练习',
+          'scope_mac': '桌面 · Chrome + Edge + Firefox',
+          'mac_hero_title': 'Mac 全局拦截',
+          'mac_hero_on': '已开启 · 全部浏览器与应用',
+          'mac_hero_off': '已关闭 · 规则已保存但未启用',
+          'mac_hero_action_on': '应用最新规则',
+          'mac_hero_action_off': '启用 Mac 全局拦截',
+          'mac_hero_action_disable': '关闭',
+          'mac_hero_locked': '已锁定 — 请先关闭锁定模式',
+          'settings_title': '设置',
+          'settings_intro': '选择模式后，一键应用规则。',
+          'language_title': '语言',
+          'language_subtitle': '选择应用语言',
+          'mode_title': '模式',
+          'mode_practice': '练习模式',
+          'mode_live': '实机模式',
+          'mode_practice_desc': '在应用内练习流程',
+          'mode_live_desc': '扩展 + 系统 DNS 实拦截（桌面）',
+          'advanced_title': '高级设置（按需打开）',
+          'advanced_subtitle': '大多数用户可跳过本节。',
+          'apply_rules_sim': '应用规则（练习）',
+          'apply_rules_live': '应用规则（实机）',
+          'refresh_path': '刷新路径',
+          'todo_title_practice': '当前步骤（练习）',
+          'todo_title_live': '当前步骤（实机）',
+        },
+        'ko': <String, String>{
+          'tab_home': '홈',
+          'tab_rules': '스케줄',
+          'tab_test': '테스트',
+          'tab_chat': '채팅',
+          'tab_settings': '설정',
+          'scope_ios': '브라우저 확장 / 연습',
+          'scope_mac': '데스크톱 · Chrome + Edge + Firefox',
+          'mac_hero_title': 'Mac 전체 차단',
+          'mac_hero_on': '켜짐 · 모든 브라우저·앱 차단 중',
+          'mac_hero_off': '꺼짐 · 규칙은 저장됐지만 적용 안 됨',
+          'mac_hero_action_on': '최신 규칙으로 다시 적용',
+          'mac_hero_action_off': 'Mac 전체 차단 켜기',
+          'mac_hero_action_disable': '차단 해제',
+          'mac_hero_locked': '잠금 중 — 먼저 잠금 모드 끄기',
+          'settings_title': '설정',
+          'settings_intro': '모드를 고르고, 한 번에 규칙을 적용합니다.',
+          'language_title': '언어',
+          'language_subtitle': '앱 표시 언어 선택',
+          'mode_title': '모드',
+          'mode_practice': '연습 모드',
+          'mode_live': '실전 차단 모드',
+          'mode_practice_desc': '앱 안에서 흐름 연습',
+          'mode_live_desc': '확장 + 시스템 DNS로 실제 차단(데스크톱)',
+          'advanced_title': '고급 설정 (필요할 때만)',
+          'advanced_subtitle': '대부분 사용자는 이 섹션을 건너뛰어도 됩니다.',
+          'apply_rules_sim': '규칙 적용 (연습)',
+          'apply_rules_live': '규칙 적용 (실전)',
+          'refresh_path': '경로 새로고침',
+          'todo_title_practice': '지금 할 일 (연습)',
+          'todo_title_live': '지금 할 일 (실전 차단)',
+        },
+        'he': <String, String>{
+          'tab_home': 'בית',
+          'tab_rules': 'לוחות זמנים',
+          'tab_test': 'בדיקה',
+          'tab_chat': "צ'אט",
+          'tab_settings': 'הגדרות',
+          'scope_ios': 'הרחבה / תרגול',
+          'scope_mac': 'שולחן עבודה · Chrome + Edge + Firefox',
+          'mac_hero_title': 'חסימה מערכתית ב-Mac',
+          'mac_hero_on': 'פעיל · חוסם בכל הדפדפנים והאפליקציות',
+          'mac_hero_off': 'כבוי · כללים נשמרו אך לא הופעלו',
+          'mac_hero_action_on': 'החל כללים עדכניים',
+          'mac_hero_action_off': 'הפעל חסימה מערכתית',
+          'mac_hero_action_disable': 'בטל חסימה',
+          'mac_hero_locked': 'נעול — נטרל קודם את מצב הנעילה',
+          'settings_title': 'הגדרות',
+          'settings_intro': 'בחר מצב והחל כללים בלחיצה אחת.',
+          'language_title': 'שפה',
+          'language_subtitle': 'בחר שפת אפליקציה',
+          'mode_title': 'מצב',
+          'mode_practice': 'מצב תרגול',
+          'mode_live': 'מצב חסימה חי',
+          'mode_practice_desc': 'תרגול הזרימה בתוך האפליקציה',
+          'mode_live_desc': 'הרחבות + DNS מערכת (שולחן עבודה)',
+          'advanced_title': 'מתקדם (לפתוח רק אם צריך)',
+          'advanced_subtitle': 'רוב המשתמשים יכולים לדלג על החלק הזה.',
+          'apply_rules_sim': 'החל כללים (תרגול)',
+          'apply_rules_live': 'החל כללים (חי)',
+          'refresh_path': 'רענון נתיב',
+          'todo_title_practice': 'מה לעשות עכשיו (תרגול)',
+          'todo_title_live': 'מה לעשות עכשיו (חי)',
+        },
+        'ar': <String, String>{
+          'tab_home': 'الرئيسية',
+          'tab_rules': 'الجداول',
+          'tab_test': 'اختبار',
+          'tab_chat': 'الدردشة',
+          'tab_settings': 'الإعدادات',
+          'scope_ios': 'إضافة متصفح / تدريب',
+          'scope_mac': 'سطح المكتب · Chrome + Edge + Firefox',
+          'mac_hero_title': 'حظر شامل على Mac',
+          'mac_hero_on': 'مفعّل · حظر المتصفحات والتطبيقات',
+          'mac_hero_off': 'متوقف · القواعد محفوظة لكنها غير مطبّقة',
+          'mac_hero_action_on': 'تطبيق أحدث القواعد',
+          'mac_hero_action_off': 'تفعيل الحظر الشامل على Mac',
+          'mac_hero_action_disable': 'تعطيل',
+          'mac_hero_locked': 'مقفل · أوقف وضع القفل أولاً',
+          'settings_title': 'الإعدادات',
+          'settings_intro': 'اختر الوضع وطبّق القواعد بلمسة واحدة.',
+          'language_title': 'اللغة',
+          'language_subtitle': 'اختر لغة التطبيق',
+          'mode_title': 'الوضع',
+          'mode_practice': 'وضع التدريب',
+          'mode_live': 'الحظر الفعلي',
+          'mode_practice_desc': 'تجربة خطوات الاستخدام داخل التطبيق',
+          'mode_live_desc':
+              'حظر فعلي باستخدام الإضافات وDNS النظام (على سطح المكتب)',
+          'advanced_title': 'إعدادات متقدمة (افتحها عند الحاجة)',
+          'advanced_subtitle': 'يمكن لمعظم المستخدمين تخطي هذا القسم.',
+          'apply_rules_sim': 'تطبيق القواعد (تجريبي)',
+          'apply_rules_live': 'تطبيق القواعد (فعلي)',
+          'refresh_path': 'تحديث المسار',
+          'todo_title_practice': 'ما عليك فعله الآن (التدريب)',
+          'todo_title_live': 'ما عليك فعله الآن (الحظر الفعلي)',
+        },
+      };
+
+  static String t(Locale locale, String key) {
+    final String lang =
+        supportedLocales.any(
+          (Locale e) => e.languageCode == locale.languageCode,
+        )
+        ? locale.languageCode
+        : 'en';
+    return _dict[lang]?[key] ?? _dict['en']![key] ?? key;
+  }
+
+  static String languageName(String code) {
+    switch (code) {
+      case 'en':
+        return 'English';
+      case 'ja':
+        return '日本語';
+      case 'zh':
+        return '中文';
+      case 'ko':
+        return '한국어';
+      case 'he':
+        return 'עברית';
+      case 'ar':
+        return 'العربية';
+      default:
+        return code;
+    }
+  }
+}

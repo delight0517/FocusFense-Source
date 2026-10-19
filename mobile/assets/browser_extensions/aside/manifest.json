@@ -1,0 +1,80 @@
+{
+  "manifest_version": 3,
+  "name": "FocusFense for Aside",
+  "version": "1.0.31",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApsJyuZYxNadMB4llGOFC9iaurDEfIw56fgqzVqUoUihUU8Gqjpe6mEL/CQDM3++4WzD0UmGY21eSPVBo/X1nvY8Fgy5V808pVnSexwsG8tvBfbLPjdhedAL8s1Pevulq0UDNksc38XRqmX54/sOeC+Cjd7255UL9cb8zY8v6i2MIS/+L1y5gHGDVzLT/qJrFDfkbxrq4HYX8iOWy9ghq0SNHR+SfKDoVpZblYab1T+yTubP04ufnvz2OpcUGmiEdHt1MYKaqR2ZQxbBCjthOFBGj68cnRZRhbnAYMWiKniMh+/wmjHegEkN+rq86vpb4wKvurnReufmk00h+YKtDnQIDAQAB",
+  "description": "FocusFense site and schedule blocking for Aside AI Browser.",
+  "incognito": "spanning",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "FocusFense for Aside",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://*.youtu.be/*",
+        "*://youtu.be/*"
+      ],
+      "js": [
+        "precision_strike.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "precision_strike.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtube.com/*",
+        "*://*.youtu.be/*",
+        "*://youtu.be/*"
+      ],
+      "js": [
+        "youtube_distraction.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://youtube.com/*",
+        "https://*.youtube.com/*"
+      ],
+      "js": [
+        "youtube_budget_core.js",
+        "youtube_budget_content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}
