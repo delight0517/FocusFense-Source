@@ -4,7 +4,7 @@ FocusFense is a cross-platform app for managing website, app, browser, and time-
 
 ## License and commercial restrictions
 
-The FocusFense project code in this repository is offered under the PolyForm Noncommercial License 1.0.0. You may use, study, modify, and redistribute it for permitted noncommercial purposes, subject to the license. Commercial use, commercial distribution, and commercial modifications are not permitted without separate written permission from the relevant rights holders.
+The FocusFense project code in this repository is offered under the PolyForm Noncommercial License 1.0.0. You may use, study, modify, and redistribute it for permitted noncommercial purposes, subject to the license. Use, modification, or distribution for a commercial purpose is not permitted without separate written permission from the relevant rights holders. PolyForm expressly permits use by charitable, educational, public research, public safety or health, environmental protection, and government institutions regardless of funding; consult the license for the exact conditions.
 
 This is source-available software with a noncommercial restriction; it is not OSI-approved open-source software. The Open Source Initiative's definition does not allow restrictions on fields of endeavor such as business use.
 
@@ -34,4 +34,4 @@ Contributions are welcome for noncommercial development. By submitting a contrib
 
 ## Korean
 
-FocusFense 소스는 PolyForm Noncommercial 1.0.0에 따라 비상업적 목적으로 사용할 수 있습니다. 상업적 이용, 판매, 상업적 배포 및 상업적 개조는 별도 서면 허가 없이는 허용되지 않습니다. 이 조건 때문에 OSI가 정의하는 오픈소스가 아니라 비상업 조건이 붙은 소스 공개 소프트웨어입니다. 서드파티 구성요소에는 각각의 라이선스가 별도로 적용됩니다.
+FocusFense 소스는 PolyForm Noncommercial 1.0.0에 따라 허용된 비상업적 목적으로 사용·수정·배포할 수 있습니다. 상업적 목적의 이용·개조·배포에는 별도 서면 허가가 필요합니다. 다만 자선·교육·공공 연구·공공 안전/보건·환경 보호·정부 기관은 자금 출처와 무관하게 라이선스에 명시된 허용 목적 예외가 있습니다. 이 조건 때문에 OSI가 정의하는 오픈소스가 아니라 비상업 조건이 붙은 소스 공개 소프트웨어입니다. 서드파티 구성요소에는 각각의 라이선스가 별도로 적용됩니다.
