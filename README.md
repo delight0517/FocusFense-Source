@@ -2,7 +2,7 @@
 
 FocusFense is a cross-platform app for managing website, app, browser, and time-use rules, now paired with the unified FocusFence × Pomodoro release.
 
-- **Official Website**: <https://focusgate-landing.vercel.app>
+- **Official Website**: <https://delight0517.github.io/FocusFense-Downloads/>
 - **Windows Downloads (Latest v1.0.0+760)**: <https://github.com/delight0517/FocusFense-Downloads/releases/latest>
 - **Discord Community & Feedback**: <https://discord.gg/Ks78BjAhKK>
 
