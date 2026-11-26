@@ -1,6 +1,10 @@
 # FocusFense source
 
-FocusFense is a cross-platform app for managing website, app, browser, and time-use rules. This repository contains the application source snapshot corresponding to version 1.0.0+572.
+FocusFense is a cross-platform app for managing website, app, browser, and time-use rules, now paired with the unified FocusFence × Pomodoro release.
+
+- **Official Website**: <https://focusgate-landing.vercel.app>
+- **Windows Downloads (Latest v1.0.0+760)**: <https://github.com/delight0517/FocusFense-Downloads/releases/latest>
+- **Discord Community & Feedback**: <https://discord.gg/Ks78BjAhKK>
 
 ## License and commercial restrictions
 
